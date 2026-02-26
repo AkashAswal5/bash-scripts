@@ -8,16 +8,18 @@
 
             # cat "file_name" | grep "word" -n | wc -l
 
-#   read -p file_name
-#   read -p word
-#   count=0
-   
-count=0;
-while read -r line;
-do
-echo "$line" | grep "fox"
-((count++))
-echo "$count"
-done < "test"
+read -p "Enter a file name: " file_name
+   read -p "enter a word to search: " word 
+   echo -e "\n"
+  
+count=0
+line_number=0;
+while read -r line; do
+  ((line_number++))
+  if echo "$line" | grep -q "$word"; then
+    echo "Line $line_number: $line"
+    ((count++))
+  fi
+done < "$file_name"
 
-
+echo "Total occurrences: $count"
