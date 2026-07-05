@@ -1,0 +1,1 @@
+- solve up to these bash command challenges: https://cmdchallenge.com/#/print_number_sequence

@@ -4,25 +4,17 @@
 
 read -p "Enter year, we will check if it is leap year or not: " year
 if (( $year % 4 == 0 )); then
-    if (( $year % 400 == 0 )) ; then
-      echo "leap year" 
-    else if (( $
-      echo "not leap year"
-    fi
-else
-  	echo "not leap year"
-fi
-
-read -p "Enter year, we will check if it is leap year or not: " year
-if (( $year % 4 == 0 )); then
-    if (( $year % 100 == 0 && $year %400 ==0 )) ; then
+  if (( $year % 100 == 0 )) ; then
+    if (( $year %400 ==0 )) ; then 
       echo "leap year" 
     else
       echo "not leap year"
     fi
+  else
+  	echo "leap year"
+  fi
 else
-  	echo "not leap year"
+  echo "not leap year"
 fi
-
 
 
