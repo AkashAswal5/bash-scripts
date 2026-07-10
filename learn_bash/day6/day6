@@ -1,0 +1,9 @@
+#!/bin/bash
+# alias temperature='curl wttr.in/bengaluru'
+temperature() {
+	city=${1:-"Bengaluru"}
+	curl wttr.in/${city}
+}
+
+read -p "Enter your city name for find temp: " city 
+temperature "$city"
