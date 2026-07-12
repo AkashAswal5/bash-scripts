@@ -32,11 +32,11 @@ Cleanup with trap and Functions: Create a function setup_temp that creates a tem
     *   If the first succeeds but the second fails, print "Upgrade failed", return the second command's exit status.
     *   If both succeed, return **0**.
 
-4.  **File Validation Function**: Write a function `validate_config` that takes a filepath as an argument. It should check:
-    *   If the file exists (return **1** if missing).
-    *   If the file is readable (return **2** if not readable).
-    *   If the file is empty (return **3** if empty).
-    *   If all checks pass, `echo` "Config valid" and return **0**.
+# 4.  **File Validation Function**: Write a function `validate_config` that takes a filepath as an argument. It should check:
+#    *   If the file exists (return **1** if missing).
+#    *   If the file is readable (return **2** if not readable).
+#    *   If the file is empty (return **3** if empty).
+#    *   If all checks pass, `echo` "Config valid" and return **0**.
 
 5.  **Capturing Output vs. Status in Loops**: Create a function `check_hosts` that takes a list of hostnames (e.g., `google.com github.com`).
     *   Loop through each host and `ping -c 1` it.
